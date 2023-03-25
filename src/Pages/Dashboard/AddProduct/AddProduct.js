@@ -18,7 +18,7 @@ const AddProduct = () => {
     const { data: categories = [] } = useQuery({
         queryKey: ['categories'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/categories`);
+            const res = await fetch(`https://e-shop-self-sigma.vercel.app/categories`);
             const data = await res.json();
             return data
         }
@@ -27,7 +27,7 @@ const AddProduct = () => {
     const { data: locations = [], refetch} = useQuery({
         queryKey: ['locations'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/locations`);
+            const res = await fetch(`https://e-shop-self-sigma.vercel.app/locations`);
             const data = await res.json();
             return data
         }
@@ -57,17 +57,15 @@ const AddProduct = () => {
                         phone: data.phone,
                         categoryId: data.categoryId,
                         img: imgData.data.url,
-                        location: data.location,
                         price: data.price,
                         resale_price: data.resale_price,
                         description: data.description,
                         condition: data.condition,
-                        used_time: data.used_time,
                         verified_seller : verifiedSeller.verified
 
                     }
 
-                    fetch(`http://localhost:5000/products`, {
+                    fetch(`https://e-shop-self-sigma.vercel.app/products`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -128,12 +126,12 @@ const AddProduct = () => {
                     </label>
                     <input type="text" {...register("resale_price")} placeholder="Resale Price" className="input input-bordered" />
                 </div>
-                <div className="form-control">
+                {/* <div className="form-control">
                     <label className="label">
                         <span className="label-text">Used Time</span>
                     </label>
                     <input type="text" {...register("used_time")} placeholder="Used time" className="input input-bordered" />
-                </div>
+                </div> */}
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Condition type</span>

@@ -15,7 +15,7 @@ const OrderModal = ({ singleProduct, setSingleProduct}) => {
     const { data: locations = [], refetch } = useQuery({
         queryKey: ['locations'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/locations`);
+            const res = await fetch(`https://e-shop-self-sigma.vercel.app/locations`);
             const data = await res.json();
             return data
         }
@@ -39,7 +39,7 @@ const OrderModal = ({ singleProduct, setSingleProduct}) => {
                 seller_email : email,
             }
     
-            fetch('http://localhost:5000/orders', {
+            fetch('https://e-shop-self-sigma.vercel.app/orders', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

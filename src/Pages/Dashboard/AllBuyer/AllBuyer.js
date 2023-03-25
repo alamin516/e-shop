@@ -10,7 +10,7 @@ const AllBuyer = () => {
     const {data : buyers = [], isLoading, refetch} = useQuery({
         queryKey: ['buyers'],
         queryFn: async () =>{
-            const res = await fetch('http://localhost:5000/users/buyer?role=buyer', {
+            const res = await fetch('https://e-shop-self-sigma.vercel.app/users/buyer?role=buyer', {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -21,7 +21,7 @@ const AllBuyer = () => {
     })
 
     const handlebuyerDelete = buyer =>{
-        fetch(`http://localhost:5000/users/buyer/${buyer?._id}` ,{
+        fetch(`https://e-shop-self-sigma.vercel.app/users/buyer/${buyer?._id}` ,{
             method: 'DELETE',
         })
         .then(res => res.json())

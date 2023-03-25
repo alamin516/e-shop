@@ -9,7 +9,7 @@ const AllSeller = () => {
     const { data: sellers = [], isLoading, refetch } = useQuery({
         queryKey: ['sellers'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/users/seller?role=seller', {
+            const res = await fetch('https://e-shop-self-sigma.vercel.app/users/seller?role=seller', {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -22,7 +22,7 @@ const AllSeller = () => {
 
 
     const handleUpdateSellerStatus = id => {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://e-shop-self-sigma.vercel.app/users/admin/${id}`, {
             method: 'PUT',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -38,7 +38,7 @@ const AllSeller = () => {
     }
 
     const handleSellerDelete = seller => {
-        fetch(`http://localhost:5000/users/seller/${seller?._id}`, {
+        fetch(`https://e-shop-self-sigma.vercel.app/users/seller/${seller?._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

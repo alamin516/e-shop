@@ -12,7 +12,7 @@ const MyProducts = () => {
     const {data: products = [], refetch, isLoading} = useQuery({
         queryKey: ['products'],
         queryFn: async () =>{
-            const res = await fetch(`http://localhost:5000/products/my-products?email=${user?.email}`, {
+            const res = await fetch(`https://e-shop-self-sigma.vercel.app/products/my-products?email=${user?.email}`, {
                 headers: {
                     authorization: `bearer ${localStorage.getItem('accessToken')}`
                 }
@@ -27,7 +27,7 @@ const MyProducts = () => {
     
 
     const handleProductDelete = product =>{
-        fetch(`http://localhost:5000/products/${product._id}` ,{
+        fetch(`https://e-shop-self-sigma.vercel.app/products/${product._id}` ,{
             method: 'DELETE',
         })
         .then(res => res.json())

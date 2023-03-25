@@ -45,12 +45,12 @@ const router = createBrowserRouter([
             },
             {
                 path: '/category/:id',
-                loader: async({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+                loader: async({params}) => fetch(`https://e-shop-self-sigma.vercel.app/category/${params.id}`),
                 element: <AllCars></AllCars>
             },
             {
                 path: '/product/:id',
-                loader: async({params}) => fetch(`http://localhost:5000/product/${params.id}`),
+                loader: async({params}) => fetch(`https://e-shop-self-sigma.vercel.app/product/${params.id}`),
                 element: <SingleCar></SingleCar>
             }
         ]
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/payment/:id',
-                loader: async({params})=> fetch(`http://localhost:5000/orders/${params.id}`),
+                loader: async({params})=> fetch(`https://e-shop-self-sigma.vercel.app/orders/${params.id}`),
                 element: <Payment></Payment>
             },
             {

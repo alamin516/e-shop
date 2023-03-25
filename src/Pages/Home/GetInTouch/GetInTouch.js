@@ -8,7 +8,7 @@ const GetInTouch = () => {
             <div className="hero-content container lg:w-1/4">
                 <div className="card flex-shrink-0 r-12 w-full shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <h2 className='text-2xl font-semibold mb-10'>Want to add your Car in our listing?</h2>
+                        <h2 className='text-2xl font-semibold mb-10'>Want to add your product in our listing?</h2>
                         <div className="form-control">
                             <input type="phone" placeholder="Enter Your Phone Number" className="input input-bordered" />
                         </div>

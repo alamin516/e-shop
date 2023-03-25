@@ -14,7 +14,7 @@ const AllCars = () => {
     const { data: cars = [], isLoading, refetch } = useQuery({
         queryKey: ['cars'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/products/id?id=${_id}`);
+            const res = await fetch(`https://e-shop-self-sigma.vercel.app/products/id?id=${_id}`);
             const data = await res.json();
             return data
         }

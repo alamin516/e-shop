@@ -16,7 +16,7 @@ const HomeAbout = () => {
                     <div>
                         <p className='text-lg font-semibold mb-3'><FaCheck className='text-white inline bg-secondary rounded-full p-1'></FaCheck> Quality Cars at Guaranteed Prices</p>
                         <p className='text-lg font-semibold mb-3'><FaCheck className='text-white inline bg-secondary rounded-full p-1'></FaCheck> Routine Service Available</p>
-                        <p className='text-lg font-semibold mb-3'><FaCheck className='text-white inline bg-secondary rounded-full p-1'></FaCheck> Turn Your Car Into Cash</p>
+                        <p className='text-lg font-semibold mb-3'><FaCheck className='text-white inline bg-secondary rounded-full p-1'></FaCheck> Turn Your Product Into Cash</p>
                     </div>
                     <button className='py-2 px-5 text-lg font-semibold bg-secondary text-white rounded-lg mt-3 hover:bg-[#C20095]'>About us</button>
                 </div>

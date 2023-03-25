@@ -54,7 +54,7 @@ const SignUp = () => {
     const saveUserDb = (name, email, role, phone) => {
         const user = { name, email, role, phone }
 
-        fetch('http://localhost:5000/users', {
+        fetch('https://e-shop-self-sigma.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
